@@ -1,1 +1,1 @@
-# https://annakowalczuk.github.io/webpack-and-react-20.04/
+# https://musing-ritchie-ca2ae2.netlify.com/
