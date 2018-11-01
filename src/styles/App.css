@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.TodoApp {
+  color: #fff;
+  max-width: 400px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.TodoApp>div {
+  padding-right: 25px;
+  padding-left: 25px;
+  background-color: #60a3bc;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #60a3bc;
+}
