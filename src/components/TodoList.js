@@ -1,11 +1,16 @@
 // Komponent ma za zadanie odebrać na wejściu listę rzeczy do zrobienia i odpowiednio wyświetlić każdy jej element.
 import React from 'react';
+import Todo from './Todo';
 import style from '../styles/TodoList.css';
 
-const TodoList = (param) => {
+const TodoList = ({listItems, removeTodo}) => {
+  const todoNode = listItems.map((item) => {return (
+    <Todo todo={item} key={item.id} removeTodo={removeTodo} />
+  ) });
+
   return (
     <ul className={style.TodoList} >
-    {param.listItems.map((item) => <li key={item.id}>{item.text}</li>)}
+    {todoNode}
     </ul>
   );
 }
