@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+.TodoForm {
+  width: 100%;
+  margin: 0;
+  padding: 10px 25px;
+  background-color: #fff;
+  color: #000305;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #60a3bc;
+  border-top: none;
+  border-bottom: none;
+}
+
+.TodoForm>textarea {
+  display: inline-block;
+  width: 100%;
+  margin-top: 4px;
+  border: 1px solid #60a3bc;
+  border-radius: 4px;
+  outline-style: none;
+}
+
+.TodoForm>input[type=submit] {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #60a3bc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #60a3bc;
+  color: #fff;
+  outline-style: none;
+}
+
+.TodoForm>input[type=submit]:hover {
+  background-color: #fff;
+  color: #60a3bc;
+}

@@ -2,7 +2,6 @@
 import React from 'react';
 
 const Todo = ({todo, removeTodo}) => {
-  console.log(todo.id);
   return (
     <li key={todo.id} onClick={(e) => removeTodo(todo.id)}>{todo.text}</li>
   );
