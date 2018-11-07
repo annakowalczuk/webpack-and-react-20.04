@@ -13,18 +13,24 @@
   border-color: #60a3bc;
   border-top: none;
   border-bottom: none;
+  display: flex;
+  flex-direction: column;
 }
 
-.TodoForm>textarea {
-  display: inline-block;
-  width: 100%;
+.TodoForm>input {
   margin-top: 4px;
+}
+
+.TodoForm>input#todoText {
+  width: 100%;
   border: 1px solid #60a3bc;
   border-radius: 4px;
   outline-style: none;
 }
 
 .TodoForm>input[type=submit] {
+  max-width: 55px;
+  width: 100%;
   border-width: 1px;
   border-style: solid;
   border-color: #60a3bc;

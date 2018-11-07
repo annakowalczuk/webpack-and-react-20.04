@@ -24,7 +24,7 @@ class App extends React.Component {
             ]
         };
     }
-    addTodo(val) {
+    addTodo = (val) => {
         const todo = {
             text: val,
             id: uuid.v4()
@@ -35,19 +35,16 @@ class App extends React.Component {
         ];
         this.setState({data});
     }
-    removeTodo(id) {
-        const remainder = this
-            .state
-            .data
-            .filter(todo => todo.id !== id);
+    removeTodo = (id) => {
+        const remainder = this.state.data.filter(todo => todo.id !== id);
         this.setState({data: remainder});
     }
     render() {
         return (
             <div className={style.TodoApp}>
                 <Title todoAmount={this.state.data.length}/>
-                <TodoForm addTodo={this.addTodo.bind(this)} />
-                <TodoList listItems={this.state.data} removeTodo={this.removeTodo.bind(this)}/>
+                <TodoForm addTodo={this.addTodo} />
+                <TodoList listItems={this.state.data} removeTodo={this.removeTodo}/>
             </div>
         );
     }

@@ -8,7 +8,7 @@ class TodoForm extends React.Component {
     this.state = {value: ''};
   }
   
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault(); 
     if (this.state.value != ''){
       this.props.addTodo(this.state.value)
@@ -16,11 +16,19 @@ class TodoForm extends React.Component {
     this.state.value = '';
   }
 
+  handleChange = (e) => {
+    this.setState({value: event.target.value})
+  }
+
   render(){
     return (
-    <form className={style.TodoForm} onSubmit={this.handleSubmit.bind(this)}>
+    <form className={style.TodoForm} onSubmit={this.handleSubmit}>
       <label htmlFor="todoText">Add To-do:</label>
-      <textarea id="todoText" value={this.state.value} onChange={(e) => this.setState({value: event.target.value})} ></textarea>
+      <input 
+        id="todoText" 
+        value={this.state.value} 
+        onChange={this.handleChange} >
+      </input>
       <input type="submit" value="Submit" />
     </form>
     );
