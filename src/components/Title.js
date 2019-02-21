@@ -5,7 +5,7 @@ const Title = ({todoAmount}) => {
     return (
       <div>
         <h1>This is simple To-Do app</h1>
-        <h3> You've got {todoAmount} To-Do's</h3>
+        <h3> You've got {todoAmount} To-Dos</h3>
       </div>
     );
   }
